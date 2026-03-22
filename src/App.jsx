@@ -14,7 +14,10 @@ function App() {
     <ThemeProvider>
       <AuthProvider>
         <TaskProvider>
-          <Router>
+          <Router future={{
+            v7_startTransition: true,
+            v7_relativeSplatPath: true
+          }}>
             <div className="min-h-screen bg-gradient-to-br from-indigo-500 via-purple-500 to-pink-500 dark:from-slate-900 dark:via-purple-900 dark:to-slate-900 flex flex-col">
               <Navbar />
               <main className="flex-1">
